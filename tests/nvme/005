@@ -36,7 +36,7 @@ test() {
 	nvme connect -t loop -n blktests-subsystem-1
 
 	local nvmedev
-	nvmedev="$(_find_nvme_loop_dev)"
+	nvmedev=$(_find_nvme_loop_dev "blktests-subsystem-1")
 
 	udevadm settle
 
